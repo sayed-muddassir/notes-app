@@ -15,6 +15,11 @@ public class NotesRestController {
     @Autowired
     NotesService notesService;
 
+    @GetMapping(path = "/hello")
+    public String hello(){
+        return "Hello World";
+    }
+
     @GetMapping(path = "/getAll")
     public List<Notes> getAllNotes(@RequestParam String userName){
         return notesService.getAllNotesForUser(userName);

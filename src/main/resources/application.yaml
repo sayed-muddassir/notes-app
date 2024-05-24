@@ -2,9 +2,9 @@ spring:
   application:
     name: notes
   datasource:
-    url: jdbc:mysql://localhost:3306/backend
+    url: jdbc:mysql://backend.cb4628uq0oj9.ap-south-1.rds.amazonaws.com:3306/backend
     username: root
-    password: 1234
+    password: 12345678
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,6 +19,7 @@ logging:
             sql:
               BasicBinder: TRACE
 server:
+  port: 8080
   servlet:
     context-path: /api
 
